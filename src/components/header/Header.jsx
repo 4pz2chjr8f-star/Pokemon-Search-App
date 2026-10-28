@@ -1,4 +1,4 @@
-import pokemonLogo from "../assets/logo.svg";
+import pokemonLogo from "../../assets/logo.svg";
 import styles from "./Header.module.css";
 
 export const Header = () => {
