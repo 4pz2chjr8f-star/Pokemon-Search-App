@@ -5,7 +5,9 @@ function App() {
   return (
     <>
       <Header />
-      <Search />
+      <div className="container">
+        <Search />
+      </div>
     </>
   );
 }

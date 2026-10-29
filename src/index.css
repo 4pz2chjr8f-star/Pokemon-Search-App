@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -72,4 +74,21 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+body {
+  background-color: red;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: hsla(0, 14%, 96%, 0.826);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 7px;
 }

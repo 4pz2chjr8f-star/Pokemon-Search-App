@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getData } from "../../services/pokemonData";
+import styles from "./Search.module.css";
 
 export const Search = () => {
   const [pokemonName, setpokemonName] = useState("");
@@ -32,6 +33,7 @@ export const Search = () => {
         }}
       >
         <input
+          className={styles.input}
           type="text"
           value={pokemonName}
           placeholder="Choose Your Pókemon"
