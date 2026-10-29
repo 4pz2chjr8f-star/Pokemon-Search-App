@@ -1,12 +1,14 @@
-export async function getData() {
+export async function getData(pokemonName) {
   const URI = `https://pokeapi.co/api/v2/pokemon/`;
 
-  const response = await fetch(URI + pokemonName);
+  // console.log("Searching for:", JSON.stringify(pokemonName));
+
+  const response = await fetch(URI + pokemonName.trim().toLowerCase());
 
   if (!response.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error("Pokemon not found!");
   }
-  const pokemon = response.json();
+  const pokemon = await response.json();
 
   return pokemon;
 }
