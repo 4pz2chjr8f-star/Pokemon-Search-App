@@ -8,7 +8,7 @@
 }
 
 .randomButton {
-  margin: 10px;
+  /* margin: 10px; */
   padding: 15px 45px;
   text-align: center;
   font-weight: bold;
@@ -17,7 +17,7 @@
   outline: none;
   box-shadow: 0 0 20px #eee;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   color: white;
   font-weight: bold;
   font-size: 1.2em;

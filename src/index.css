@@ -86,7 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  max-width: 700px;
   height: 1000px;
   margin: auto;
   margin-top: 30px;
@@ -95,5 +95,6 @@ body {
 
 .btn-wrapper {
   display: flex;
+  align-items: center;
   margin-top: 20px;
 }

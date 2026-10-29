@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { getData } from "../../services/pokemonData";
 import styles from "./RandomButton.module.css";
 
-export const RandomButton = ({ children }) => {
+export const RandomButton = ({ onRandomPokemon }) => {
   const [particles, setParticles] = useState([]);
 
   const burst = () => {
@@ -31,10 +32,25 @@ export const RandomButton = ({ children }) => {
     setTimeout(() => setParticles([]), 950);
   };
 
+  const handleRandomPokemon = async () => {
+    burst();
+    try {
+      const randomId = Math.floor(Math.random() * 151) + 1;
+      const data = await getData(String(randomId));
+      onRandomPokemon(data);
+    } catch (error) {
+      console.error("Could not fetch a random Pókemon:", error);
+    }
+  };
+
   return (
     <div style={{ position: "relative" }}>
-      <button onClick={burst} className={styles.randomButton}>
-        Random Pokémon
+      <button
+        onClick={handleRandomPokemon}
+        type="button"
+        className={styles.randomButton}
+      >
+        I'm Feeling Lucky!
       </button>
       {particles.map((p) => (
         <span
