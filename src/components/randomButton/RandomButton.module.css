@@ -1,0 +1,51 @@
+.randomButton {
+  background-image: linear-gradient(
+    to right,
+    #d31027 0%,
+    #ea384d 51%,
+    #d31027 100%
+  );
+}
+
+.randomButton {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 20px #eee;
+  cursor: pointer;
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.randomButton:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.confettiParticle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ff4d6d;
+  border-radius: 2px;
+  pointer-events: none;
+  animation: confetti-fly 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes confetti-fly {
+  to {
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot));
+    opacity: 0;
+  }
+}
