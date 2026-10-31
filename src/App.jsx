@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { getData } from "./services/pokemonData";
-
 import { Header } from "./components/header/Header";
 import { PokemonCard } from "./components/pokemonCard/PokemonCard";
 import { RandomButton } from "./components/randomButton/RandomButton";
@@ -14,6 +13,7 @@ function App() {
 
   const handleSearch = async () => {
     setError("");
+    setPokemon(null);
 
     try {
       const data = await getData(pokemonName);
@@ -37,6 +37,7 @@ function App() {
           pokemonName={pokemonName}
           setPokemonName={setPokemonName}
           error={error}
+          onSearch={handleSearch}
         />
 
         <div className="btn-wrapper">

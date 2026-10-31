@@ -1,4 +1,4 @@
-import styles from "./pokemonCard.module.css";
+import styles from "./PokemonCard.module.css";
 
 export const PokemonCard = ({ pokemon }) => {
   if (!pokemon) {
@@ -10,8 +10,10 @@ export const PokemonCard = ({ pokemon }) => {
     pokemon.sprites.front_default;
 
   return (
-    <div>
-      <h2>{pokemon.name}</h2>
+    <div className={styles.container}>
+      <h2 className={styles.h2}>
+        {pokemon.name.slice(0, 1).toUpperCase() + pokemon.name.slice(1)}
+      </h2>
       <img src={image} alt={pokemon.name} />
       {/* <p>Pókedex Number: # {pokemon.id}</p> */}
     </div>
