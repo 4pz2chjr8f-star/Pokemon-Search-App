@@ -35,7 +35,6 @@ export const PokemonCard = ({ pokemon }) => {
   const mainType = types[0].type.name;
 
   const stats = pokemon.stats;
-  console.log(stats);
 
   const STATS_MAP = {
     hp: "HP",

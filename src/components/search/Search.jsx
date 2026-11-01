@@ -12,6 +12,7 @@ export const Search = ({ pokemonName, setPokemonName, error, onSearch }) => {
         <input
           className={styles.input}
           type="text"
+          name="pokemonName"
           value={pokemonName}
           placeholder="Choose Your Pokémon"
           onChange={(e) => setPokemonName(e.target.value)}
